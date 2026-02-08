@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+  "name": "BookWalker JP Ripper",
+  "version": "1.0",
+  "description": "BookWalker JP Ripper, Bypasses CORS, downloads canvases, and automates jQuery UI sliders.",
+  "permissions": ["<all_urls>", "webRequest", "webRequestBlocking"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["injector.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": ["logic.js"]
+}
